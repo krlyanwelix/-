@@ -16,4 +16,4 @@ typedef struct CompactGraph
 	}
 }CompactGraph;
 
-void TopoSort(const CompactGraph& g);
+void TopoSort(const CompactGraph g);

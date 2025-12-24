@@ -2,26 +2,35 @@
 
 int main()
 {
-	int n = 5;  //顶点数
+	int n = 8;
 	CompactGraph g(n);
 
-	//顶点0的邻居：1、2
-	g.list.push_back(1);
 	g.list.push_back(2);
-	g.h[0] = 0;
-	//顶点1的邻居：3
 	g.list.push_back(3);
-	g.h[1] = 2;
-	//顶点2的邻居：3
+	g.h[1] = 0;
+
 	g.list.push_back(3);
-	g.h[2] = 3;
-	//顶点3的邻居：4
+	g.list.push_back(7);
+	g.h[2] = 2;
+
 	g.list.push_back(4);
 	g.h[3] = 4;
-	//顶点4无邻居
+
+	g.list.push_back(5);
+	g.list.push_back(6);
 	g.h[4] = 5;
-	//h[n]指向list末尾
-	g.h[5] = 5;
+
+	g.list.push_back(0);
+	g.h[5] = 7;
+
+	g.list.push_back(0);
+	g.h[6] = 8;
+
+	g.list.push_back(8);
+	g.h[7] = 9;
+
+	g.list.push_back(0);
+	g.h[8] = 10;
 
 	TopoSort(g);
 
